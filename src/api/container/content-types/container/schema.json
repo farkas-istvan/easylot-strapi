@@ -1,0 +1,246 @@
+{
+  "kind": "collectionType",
+  "collectionName": "containers",
+  "info": {
+    "singularName": "container",
+    "pluralName": "containers",
+    "displayName": "container",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "productMainCategory": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "DRINKS"
+      ],
+      "required": true,
+      "private": true,
+      "default": "DRINKS"
+    },
+    "productSubcategory": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "CONTAINER"
+      ],
+      "required": true,
+      "private": true,
+      "default": "CONTAINER"
+    },
+    "brand": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "ean": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true,
+      "maxLength": 13,
+      "minLength": 13,
+      "regex": "^[0-9]{13}$"
+    },
+    "vatRate": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "mainType": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "STANDALONE",
+        "COLLECTION"
+      ],
+      "required": true
+    },
+    "mainMaterial": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "GLASS",
+        "METAL",
+        "ALUMINUM",
+        "WOOD",
+        "CROCKWOOD",
+        "PLASTIC",
+        "PAPER_AND_CARDBOARD",
+        "CERAMICS",
+        "VULCANIZED_SOFT_RUBBER",
+        "PRODUCT_OF_PLANT_ORIGIN_NOT_MENTIONED_ELSEWHERE",
+        "OTHER"
+      ],
+      "required": true
+    },
+    "corkwoodSubmaterial": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "NATURAL",
+        "AGGLOMERATED"
+      ]
+    },
+    "plasticSubmaterial": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "SELF_ADHESIVE",
+        "OTHER"
+      ]
+    },
+    "collectionContainerProperties": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "properties.collection-container-props"
+    },
+    "standaloneContainerProperties": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "properties.standalone-container-props"
+    },
+    "dimensions": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "properties.dimensions",
+      "required": true
+    },
+    "globalContainerId": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "required": true,
+      "maxLength": 30,
+      "minLength": 8
+    },
+    "images": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::container-image.container-image",
+      "inversedBy": "containers"
+    },
+    "packages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::package.package",
+      "inversedBy": "containers"
+    },
+    "marketingProperties": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "properties.marketing-properties",
+      "required": true
+    },
+    "seoProperties": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "properties.seo-props"
+    },
+    "robotsMetaTags": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "properties.tag"
+    },
+    "merchantId": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "regex": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+      "required": true,
+      "maxLength": 36,
+      "minLength": 36
+    }
+  }
+}

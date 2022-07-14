@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_properties_marketing_properties",
+  "info": {
+    "displayName": "marketingProps",
+    "icon": "sliders-h",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "shortDescription": {
+      "type": "text",
+      "required": true,
+      "minLength": 1
+    },
+    "detailedDescription": {
+      "type": "richtext",
+      "required": false
+    },
+    "videoLink": {
+      "type": "string"
+    },
+    "productTags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "properties.tag"
+    }
+  }
+}

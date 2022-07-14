@@ -1,2 +1,1 @@
-npm install
-nohup npm run start&
+pm2 start npm --name easylot-strapi -- run develop

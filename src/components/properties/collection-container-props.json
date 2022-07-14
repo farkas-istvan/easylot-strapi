@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_properties_collection_container_props",
+  "info": {
+    "displayName": "collectionItemProps",
+    "icon": "sliders-h",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtype": {
+      "type": "enumeration",
+      "enum": [
+        "CHEST",
+        "CRATE",
+        "PALLET",
+        "CARTON",
+        "SHRINK",
+        "TRAY",
+        "OTHER"
+      ],
+      "required": true
+    },
+    "packagingUnitOfCartonContainerSubtype": {
+      "type": "enumeration",
+      "enum": [
+        "CARTON_PER_PALLET"
+      ]
+    },
+    "packagingUnitOfShrinkContainerSubtype": {
+      "type": "enumeration",
+      "enum": [
+        "SHRINK_PER_PALLET"
+      ]
+    },
+    "packagingUnitOfTrayContainerSubtype": {
+      "type": "enumeration",
+      "enum": [
+        "TRAY_PER_PALLET"
+      ]
+    },
+    "packagingUnitOfCrateContainerSubtype": {
+      "type": "enumeration",
+      "enum": [
+        "CRATE_PER_PALLET"
+      ]
+    },
+    "quantity": {
+      "type": "integer",
+      "min": 1,
+      "required": true
+    }
+  }
+}

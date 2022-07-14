@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_properties_seo_props",
+  "info": {
+    "displayName": "seoProps",
+    "icon": "search"
+  },
+  "options": {},
+  "attributes": {
+    "friendlyUrl": {
+      "type": "string",
+      "required": false
+    },
+    "metaTitle": {
+      "type": "string",
+      "required": false
+    },
+    "metaDescription": {
+      "type": "string",
+      "required": false
+    },
+    "metaTags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "properties.tag",
+      "required": false
+    }
+  }
+}

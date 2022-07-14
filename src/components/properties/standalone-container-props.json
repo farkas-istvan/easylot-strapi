@@ -1,0 +1,68 @@
+{
+  "collectionName": "components_properties_standalone_container_props",
+  "info": {
+    "displayName": "standaloneItemProps",
+    "icon": "sliders-h",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtype": {
+      "type": "enumeration",
+      "enum": [
+        "BOTTLE",
+        "BOX",
+        "PLASTIC_BOTTLE",
+        "BARREL",
+        "KEY_KEG",
+        "JUG",
+        "CANISTER",
+        "OTHER"
+      ],
+      "required": true
+    },
+    "packagingUnitOfBottleContainerSubtype": {
+      "type": "enumeration",
+      "enum": [
+        "BOTTLE_PER_CARTON",
+        "BOTTLE_PER_SHRINK",
+        "BOTTLE_PER_TRAY",
+        "BOTTLE_PER_CRATE",
+        "BOTTLE_PER_PALLET"
+      ]
+    },
+    "packagingUnitOfBoxContainerSubtype": {
+      "type": "enumeration",
+      "enum": [
+        "BOX_PER_CARTON",
+        "BOX_PER_SHRINK",
+        "BOX_PER_TRAY",
+        "BOX_PER_CRATE",
+        "BOX_PER_PALLET"
+      ]
+    },
+    "packagingUnitOfPlasticBottleContainerSubtype": {
+      "type": "enumeration",
+      "enum": [
+        "PLASTIC_BOTTLE_PER_CARTON",
+        "PLASTIC_BOTTLE_PER_SHRINK",
+        "PLASTIC_BOTTLE_PER_TRAY",
+        "PLASTIC_BOTTLE_PER_CRATE",
+        "PLASTIC_BOTTLE_PER_PALLET"
+      ]
+    },
+    "amount": {
+      "type": "decimal",
+      "min": 0,
+      "required": true
+    },
+    "unit": {
+      "type": "enumeration",
+      "enum": [
+        "LITERS",
+        "KILOGRAMS"
+      ],
+      "required": true
+    }
+  }
+}

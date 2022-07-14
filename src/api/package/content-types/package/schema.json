@@ -1,0 +1,191 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packages",
+  "info": {
+    "singularName": "package",
+    "pluralName": "packages",
+    "displayName": "package",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "productMainCategory": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "WRAPPERS"
+      ],
+      "private": true,
+      "required": true,
+      "default": "WRAPPERS"
+    },
+    "productSubcategory": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "PACKAGING_ITEMS"
+      ],
+      "required": true,
+      "private": true,
+      "default": "PACKAGING_ITEMS"
+    },
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "vatRate": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "mainType": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "STANDALONE",
+        "COLLECTION"
+      ],
+      "required": true
+    },
+    "mainMaterial": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "GLASS",
+        "METAL",
+        "ALUMINUM",
+        "WOOD",
+        "CROCKWOOD",
+        "PLASTIC",
+        "PAPER_AND_CARDBOARD",
+        "CERAMICS",
+        "VULCANIZED_SOFT_RUBBER",
+        "PRODUCT_OF_PLANT_ORIGIN_NOT_MENTIONED_ELSEWHERE",
+        "OTHER"
+      ],
+      "required": true
+    },
+    "corkwoodSubmaterial": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "NATURAL",
+        "AGGLOMERATED"
+      ]
+    },
+    "plasticSubmaterial": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "SELF_ADHESIVE",
+        "OTHER"
+      ]
+    },
+    "collectionPackageProperties": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "properties.collection-container-props"
+    },
+    "standalonePackageProperties": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "properties.standalone-container-props"
+    },
+    "dimensions": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "properties.dimensions",
+      "required": true
+    },
+    "shortDescription": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text",
+      "required": false
+    },
+    "images": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::package-image.package-image",
+      "mappedBy": "packages"
+    },
+    "containers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::container.container",
+      "mappedBy": "packages"
+    },
+    "merchantId": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true,
+      "maxLength": 36,
+      "minLength": 36,
+      "regex": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    }
+  }
+}
