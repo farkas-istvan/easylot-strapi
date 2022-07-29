@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "containers",
+  "collectionName": "products",
   "info": {
-    "singularName": "container",
-    "pluralName": "containers",
-    "displayName": "container",
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
     "description": ""
   },
   "options": {
@@ -30,7 +30,7 @@
       "private": true,
       "default": "DRINKS"
     },
-    "productSubcategory": {
+    "alcoholicDrinkType": {
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -38,11 +38,35 @@
       },
       "type": "enumeration",
       "enum": [
-        "CONTAINER"
+        "BEER",
+        "GRAPE_WINE",
+        "CHAMPAGNE",
+        "LIQUOR",
+        "OTHER_SPIRIT"
       ],
-      "required": true,
-      "private": true,
-      "default": "CONTAINER"
+      "required": false
+    },
+    "nonAlcoholicDrinkType": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "COFFEE_OR_COFFEE_POWDER",
+        "COFFEE_CAPSULE_OR_POD",
+        "TEA_OR_MEDICINAL_TEA",
+        "MINERAL_WATER",
+        "SODA_POP",
+        "ICE_TEA",
+        "ENERGY_DRINK",
+        "ALCOHOL_FREE_BEER",
+        "COCKTAIL_SYRUP",
+        "SYRUP",
+        "FRUIT_OR_VEGETABLE_JUICE"
+      ],
+      "required": false
     },
     "brand": {
       "pluginOptions": {
@@ -82,11 +106,42 @@
           "localized": false
         }
       },
+      "type": "enumeration",
+      "enum": [
+        "TWENTY_SEVEN",
+        "EIGHTEEN"
+      ],
+      "required": true
+    },
+    "packaging": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "BOTTLE",
+        "BOX",
+        "PLASTIC_BOTTLE",
+        "BAG_IN_BOX",
+        "BARREL",
+        "JUG",
+        "KEG"
+      ],
+      "required": true
+    },
+    "netAmount": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
       "type": "decimal",
       "required": true,
       "min": 0
     },
-    "mainType": {
+    "unit": {
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -94,153 +149,134 @@
       },
       "type": "enumeration",
       "enum": [
-        "STANDALONE",
-        "COLLECTION"
+        "MILLILITERS",
+        "CENTILITERS",
+        "DECILITERS",
+        "LITERS",
+        "GRAMS",
+        "DECAGRAMS",
+        "KILOGRAMS",
+        "PIECES"
       ],
       "required": true
     },
-    "mainMaterial": {
+    "equalizedAmount": {
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
-      "type": "enumeration",
-      "enum": [
-        "GLASS",
-        "METAL",
-        "ALUMINUM",
-        "WOOD",
-        "CORKWOOD",
-        "PLASTIC",
-        "PAPER_AND_CARDBOARD",
-        "CERAMICS",
-        "VULCANIZED_SOFT_RUBBER",
-        "PRODUCT_OF_PLANT_ORIGIN_NOT_MENTIONED_ELSEWHERE",
-        "OTHER"
-      ],
+      "type": "boolean",
       "required": true
     },
-    "corkwoodSubmaterial": {
+    "grossWeightInKilograms": {
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
-      "type": "enumeration",
-      "enum": [
-        "NATURAL",
-        "AGGLOMERATED"
-      ]
-    },
-    "plasticSubmaterial": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "enumeration",
-      "enum": [
-        "SELF_ADHESIVE",
-        "OTHER"
-      ]
-    },
-    "collectionContainerProperties": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "component": "properties.collection-container-props"
-    },
-    "standaloneContainerProperties": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "component": "properties.standalone-container-props"
-    },
-    "dimensions": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "component": "properties.dimensions",
+      "type": "decimal",
+      "min": 0,
       "required": true
     },
-    "globalContainerId": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "uid",
-      "required": true,
-      "maxLength": 30,
-      "minLength": 8
-    },
-    "images": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::container-image.container-image",
-      "inversedBy": "containers"
-    },
-    "packages": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::package.package",
-      "inversedBy": "containers"
-    },
-    "marketingProperties": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "properties.marketing-properties",
-      "required": true
-    },
-    "seoProperties": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "properties.seo-props"
-    },
-    "robotsMetaTags": {
-      "type": "component",
-      "repeatable": true,
+    "packagingFreeProduct": {
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
-      "component": "properties.tag"
+      "type": "boolean",
+      "required": true
     },
-    "merchantId": {
+    "customerSegment": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "properties.customer-segment",
+      "required": true
+    },
+    "alcoholicDrinkProperties": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "properties.alcoholic-drink-props"
+    },
+    "knCode": {
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
       "type": "string",
-      "regex": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
       "required": true,
-      "maxLength": 36,
-      "minLength": 36
+      "maxLength": 8,
+      "minLength": 8,
+      "regex": "^[0-9]{8}$"
+    },
+    "allergenic": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "properties.allergenic",
+      "required": true
+    },
+    "productImages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-image.product-image",
+      "inversedBy": "products"
+    },
+    "placeOfOrigin": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "minLength": 1,
+      "required": true
+    },
+    "hoReCa": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "boolean",
+      "required": true
+    },
+    "shortDescription": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "maxLength": 320,
+      "minLength": 1
+    },
+    "detailedDescription": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "required": true,
+      "minLength": 1
     }
   }
 }

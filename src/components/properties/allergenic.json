@@ -1,0 +1,65 @@
+{
+  "collectionName": "components_properties_allergenics",
+  "info": {
+    "displayName": "allergenic"
+  },
+  "options": {},
+  "attributes": {
+    "gluten": {
+      "type": "boolean",
+      "required": true
+    },
+    "shellfish": {
+      "type": "boolean",
+      "required": true
+    },
+    "eggs": {
+      "type": "boolean",
+      "required": true
+    },
+    "fish": {
+      "type": "boolean",
+      "required": true
+    },
+    "peanuts": {
+      "type": "boolean",
+      "required": true
+    },
+    "soybeans": {
+      "type": "boolean",
+      "required": true
+    },
+    "milk": {
+      "type": "boolean",
+      "required": true
+    },
+    "treeNuts": {
+      "type": "boolean",
+      "required": true
+    },
+    "celery": {
+      "type": "boolean",
+      "required": true
+    },
+    "mustard": {
+      "type": "boolean",
+      "required": true
+    },
+    "sesameSeeds": {
+      "type": "boolean",
+      "required": true
+    },
+    "SulphurDioxideAndSulphites": {
+      "type": "boolean",
+      "required": true
+    },
+    "lupin": {
+      "type": "boolean",
+      "required": true
+    },
+    "molluscs": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}

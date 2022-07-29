@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_properties_low_alcohol_content_props",
+  "info": {
+    "displayName": "lowAlcoholContentProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "containsSoftDrinksOrAdditives": {
+      "type": "boolean",
+      "required": true
+    },
+    "containsAddedSugar": {
+      "type": "boolean",
+      "required": true
+    },
+    "sugarContentInGramsPerHundredMilliliters": {
+      "type": "biginteger",
+      "min": "0"
+    },
+    "containsAddedSweetener": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}

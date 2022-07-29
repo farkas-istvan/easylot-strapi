@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_properties_alcoholic_drink_props",
+  "info": {
+    "displayName": "alcoholicDrinkProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "alcoholLevel": {
+      "type": "decimal",
+      "required": true,
+      "min": 0.01,
+      "max": 1
+    },
+    "beerProperties": {
+      "type": "component",
+      "repeatable": false,
+      "component": "properties.beer-props"
+    },
+    "lowAlcoholContentProperties": {
+      "type": "component",
+      "repeatable": false,
+      "component": "properties.low-alcohol-content-props"
+    }
+  }
+}
