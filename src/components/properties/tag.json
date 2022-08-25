@@ -2,7 +2,8 @@
   "collectionName": "components_properties_tags",
   "info": {
     "displayName": "tag",
-    "icon": "hashtag"
+    "icon": "hashtag",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,7 +11,7 @@
       "type": "string",
       "required": true,
       "minLength": 1,
-      "unique": true
+      "unique": false
     }
   }
 }

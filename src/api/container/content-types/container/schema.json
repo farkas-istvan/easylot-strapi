@@ -30,7 +30,7 @@
       "private": true,
       "default": "DRINKS"
     },
-    "productSubcategory": {
+    "productSubCategory": {
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -176,17 +176,6 @@
       "component": "properties.dimensions",
       "required": true
     },
-    "globalContainerId": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "uid",
-      "required": true,
-      "maxLength": 30,
-      "minLength": 8
-    },
     "images": {
       "type": "relation",
       "relation": "manyToMany",
@@ -241,6 +230,18 @@
       "required": true,
       "maxLength": 36,
       "minLength": 36
+    },
+    "globalContainerId": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true,
+      "minLength": 8,
+      "maxLength": 30,
+      "regex": "^[0-9]{8,30}$"
     }
   }
 }

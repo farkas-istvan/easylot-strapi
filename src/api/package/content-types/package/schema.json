@@ -54,16 +54,6 @@
       "required": true,
       "minLength": 1
     },
-    "vatRate": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "decimal",
-      "required": true,
-      "min": 0
-    },
     "mainType": {
       "pluginOptions": {
         "i18n": {
@@ -186,6 +176,19 @@
       "maxLength": 36,
       "minLength": 36,
       "regex": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "vatRate": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "TWENTY_SEVEN",
+        "EIGHTEEN"
+      ],
+      "required": true
     }
   }
 }
