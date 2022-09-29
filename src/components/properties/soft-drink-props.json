@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_properties_soft_drink_props",
+  "info": {
+    "displayName": "SoftDrinkProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "containsAddedSugar": {
+      "type": "boolean"
+    },
+    "sugarContentType": {
+      "type": "enumeration",
+      "enum": [
+        "CONTAINS_SUGAR",
+        "CONTAINS_REDUCED_SUGAR",
+        "SUGAR_FREE",
+        "LIGHT"
+      ]
+    },
+    "containsAddedSweetener": {
+      "type": "boolean"
+    },
+    "sugarContentInGramsPerHundredMilliliters": {
+      "type": "decimal"
+    },
+    "basedOnSoy": {
+      "type": "boolean"
+    },
+    "containsAtLeast50PercentMilkBasedMaterial": {
+      "type": "boolean"
+    },
+    "containsFruitsOrVegetablesAtLeast50Percent": {
+      "type": "boolean"
+    },
+    "flavorType": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::flavor-type.flavor-type"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_properties_champagne_props",
+  "info": {
+    "displayName": "ChampagneProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "integer",
+      "min": 1980,
+      "required": true
+    },
+    "nature": {
+      "type": "enumeration",
+      "enum": [
+        "SWEET",
+        "SEMI_DRY",
+        "DRY",
+        "EXTRA_DRY",
+        "BRUT",
+        "EXTRA_BRUT",
+        "BRUT_NATURE"
+      ]
+    },
+    "fermentationType": {
+      "type": "enumeration",
+      "enum": [
+        "BOTTLE_FERMENTED",
+        "TANK_FERMENTED"
+      ]
+    },
+    "basicWineType": {
+      "type": "enumeration",
+      "enum": [
+        "VARIETAL_WINE",
+        "COUPAGE_CUVEE"
+      ]
+    }
+  }
+}

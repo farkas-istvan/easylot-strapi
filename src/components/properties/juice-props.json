@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_properties_juice_props",
+  "info": {
+    "displayName": "JuiceProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "containsAddedSugar": {
+      "type": "boolean"
+    },
+    "sugarContentType": {
+      "type": "enumeration",
+      "enum": [
+        "CONTAINS_SUGAR",
+        "CONTAINS_REDUCED_SUGAR",
+        "SUGAR_FREE",
+        "LIGHT"
+      ]
+    },
+    "containsAddedSweetener": {
+      "type": "boolean"
+    },
+    "sugarContentInGramsPerHundredMilliliters": {
+      "type": "decimal"
+    },
+    "brixValue": {
+      "type": "decimal"
+    },
+    "containsAtLeast25PercentFruitsOrVegetables": {
+      "type": "boolean"
+    },
+    "containsAtLeast50PercentMilkBasedMaterial": {
+      "type": "boolean"
+    },
+    "flavorTypes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::flavor-type.flavor-type"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_properties_grape_wine_props",
+  "info": {
+    "displayName": "GrapeWineProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "integer"
+    },
+    "wineType": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::enum-value.enum-value"
+    },
+    "wineCharacter": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::enum-value.enum-value"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::enum-value.enum-value"
+    },
+    "landscape": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::landscape.landscape"
+    }
+  }
+}

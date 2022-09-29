@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_properties_tea_properties",
+  "info": {
+    "displayName": "teaProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "GREEN",
+        "BLACK",
+        "WHITE",
+        "FRUIT",
+        "OTHER"
+      ]
+    },
+    "preparationProcedure": {
+      "type": "enumeration",
+      "enum": [
+        "FERMENTED",
+        "NOT_FERMENTED",
+        "EXTRACT_ESSENCE_CONCENTRATE",
+        "BASED_ON_EXTRACT_ESSENCE_CONCENTRATE"
+      ]
+    },
+    "format": {
+      "type": "enumeration",
+      "enum": [
+        "FIBROUS",
+        "FILTER",
+        "INSTANT"
+      ]
+    }
+  }
+}

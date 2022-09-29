@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "flavor_types",
+  "info": {
+    "singularName": "flavor-type",
+    "pluralName": "flavor-types",
+    "displayName": "FlavorType",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

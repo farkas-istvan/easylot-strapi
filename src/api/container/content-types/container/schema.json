@@ -76,16 +76,6 @@
       "minLength": 13,
       "regex": "^[0-9]{13}$"
     },
-    "vatRate": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "decimal",
-      "required": true,
-      "min": 0
-    },
     "mainType": {
       "pluginOptions": {
         "i18n": {
@@ -242,6 +232,19 @@
       "minLength": 8,
       "maxLength": 30,
       "regex": "^[0-9]{8,30}$"
+    },
+    "vatRate": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "TWENTY_SEVEN",
+        "EIGHTEEN"
+      ],
+      "required": true
     }
   }
 }

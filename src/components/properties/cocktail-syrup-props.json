@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_properties_cocktail_syrup_props",
+  "info": {
+    "displayName": "SyrupProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "containsAddedSugar": {
+      "type": "boolean"
+    },
+    "sugarContentType": {
+      "type": "enumeration",
+      "enum": [
+        "CONTAINS_SUGAR",
+        "CONTAINS_REDUCED_SUGAR",
+        "SUGAR_FREE",
+        "LIGHT"
+      ]
+    },
+    "containsAddedSweetener": {
+      "type": "boolean"
+    },
+    "sugarContentInGramsPerHundredMilliliters": {
+      "type": "decimal"
+    },
+    "basedOnExtractAccordingToHungarianFoodCode": {
+      "type": "boolean"
+    },
+    "fruitPerVegetablesRatioLessThan50Percent": {
+      "type": "boolean"
+    },
+    "flavorType": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::flavor-type.flavor-type"
+    }
+  }
+}

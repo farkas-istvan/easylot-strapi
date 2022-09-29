@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "beer_types",
+  "info": {
+    "singularName": "beer-type",
+    "pluralName": "beer-types",
+    "displayName": "BeerType",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "type": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "specificType": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "unique": false
+    },
+    "charater": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "unique": false
+    }
+  }
+}

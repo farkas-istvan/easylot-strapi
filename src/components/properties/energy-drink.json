@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_properties_energy_drinks",
+  "info": {
+    "displayName": "EnergyDrinkProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "basedOnSoy": {
+      "type": "boolean"
+    },
+    "containsMetilXantin": {
+      "type": "boolean"
+    },
+    "containsAddedSugar": {
+      "type": "boolean"
+    },
+    "sugarContentType": {
+      "type": "enumeration",
+      "enum": [
+        "CONTAINS_SUGAR",
+        "CONTAINS_REDUCED_SUGAR",
+        "SUGAR_FREE",
+        "LIGHT"
+      ]
+    },
+    "containsAddedSweetener": {
+      "type": "boolean"
+    },
+    "sugarContentInGramsPerHundredMilliliters": {
+      "type": "decimal"
+    },
+    "containsTaurinOrGingsengOrLarginin": {
+      "type": "boolean"
+    },
+    "flavorType": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::flavor-type.flavor-type"
+    }
+  }
+}

@@ -1,7 +1,8 @@
 {
   "collectionName": "components_properties_allergenics",
   "info": {
-    "displayName": "allergenic"
+    "displayName": "allergenic",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -49,7 +50,7 @@
       "type": "boolean",
       "required": true
     },
-    "SulphurDioxideAndSulphites": {
+    "sulphurDioxideAndSulphites": {
       "type": "boolean",
       "required": true
     },

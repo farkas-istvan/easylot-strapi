@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enum_values",
+  "info": {
+    "singularName": "enum-value",
+    "pluralName": "enum-values",
+    "displayName": "EnumValue"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "enumType": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::enum-type.enum-type",
+      "inversedBy": "enum_values"
+    },
+    "value": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "nameHun": {
+      "type": "string"
+    },
+    "nameEng": {
+      "type": "string"
+    }
+  }
+}

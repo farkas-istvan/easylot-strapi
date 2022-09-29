@@ -1,0 +1,57 @@
+{
+  "collectionName": "components_properties_non_alcoholic_drink_properties",
+  "info": {
+    "displayName": "nonAlcoholicDrinkProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "coffeeProperties": {
+      "displayName": "CoffeeProps",
+      "type": "component",
+      "repeatable": false,
+      "component": "properties.coffee-props"
+    },
+    "teaProperties": {
+      "displayName": "teaProperties",
+      "type": "component",
+      "repeatable": false,
+      "component": "properties.tea-properties"
+    },
+    "mineralWaterProperties": {
+      "type": "component",
+      "repeatable": false,
+      "component": "properties.mineral-water-props"
+    },
+    "sodaPopProperties": {
+      "type": "component",
+      "repeatable": false,
+      "component": "properties.soft-drink-props"
+    },
+    "iceTeaProperties": {
+      "type": "component",
+      "repeatable": false,
+      "component": "properties.soft-drink-props"
+    },
+    "cocktailSyrupProperties": {
+      "type": "component",
+      "repeatable": false,
+      "component": "properties.cocktail-syrup-props"
+    },
+    "juiceProperties": {
+      "type": "component",
+      "repeatable": false,
+      "component": "properties.juice-props"
+    },
+    "energyDrinkProperties": {
+      "type": "component",
+      "repeatable": false,
+      "component": "properties.energy-drink"
+    },
+    "syrupProperties": {
+      "type": "component",
+      "repeatable": false,
+      "component": "properties.cocktail-syrup-props"
+    }
+  }
+}

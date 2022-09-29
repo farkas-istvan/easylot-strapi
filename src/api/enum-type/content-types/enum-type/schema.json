@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enum_types",
+  "info": {
+    "singularName": "enum-type",
+    "pluralName": "enum-types",
+    "displayName": "EnumType",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "value": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "nameHun": {
+      "type": "string",
+      "required": false
+    },
+    "nameEng": {
+      "type": "string"
+    },
+    "enum_values": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::enum-value.enum-value",
+      "mappedBy": "enumType"
+    }
+  }
+}

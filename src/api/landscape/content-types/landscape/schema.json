@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landscapes",
+  "info": {
+    "singularName": "landscape",
+    "pluralName": "landscapes",
+    "displayName": "Landscape",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "abroad": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}

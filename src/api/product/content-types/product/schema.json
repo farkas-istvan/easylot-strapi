@@ -41,8 +41,8 @@
         "BEER",
         "GRAPE_WINE",
         "CHAMPAGNE",
-        "LIQUOR",
-        "OTHER_SPIRIT"
+        "SPIRIT",
+        "OTHER"
       ],
       "required": false
     },
@@ -277,6 +277,28 @@
       "type": "richtext",
       "required": true,
       "minLength": 1
+    },
+    "merchantId": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "regex": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+      "required": true,
+      "maxLength": 36,
+      "minLength": 36
+    },
+    "nonAlcoholicDrinkProperties": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "properties.non-alcoholic-drink-properties"
     }
   }
 }

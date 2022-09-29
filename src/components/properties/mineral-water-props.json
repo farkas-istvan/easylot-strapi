@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_properties_mineral_water_props",
+  "info": {
+    "displayName": "MineralWaterProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sourceType": {
+      "type": "enumeration",
+      "enum": [
+        "NATURAL",
+        "ARTIFICIAL"
+      ]
+    },
+    "acidityLevel": {
+      "type": "enumeration",
+      "enum": [
+        "SPARKLING",
+        "STILL",
+        "MILD"
+      ]
+    },
+    "containsAddedSugar": {
+      "type": "boolean"
+    },
+    "containsAddedSweetener": {
+      "type": "boolean"
+    },
+    "flavorType": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::flavor-type.flavor-type"
+    }
+  }
+}

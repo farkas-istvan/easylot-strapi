@@ -1,0 +1,56 @@
+{
+  "collectionName": "components_properties_spirit_properties",
+  "info": {
+    "displayName": "spiritProperties",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "spiritType": {
+      "type": "enumeration",
+      "enum": [
+        "COGNAC",
+        "WHISKY",
+        "RUM",
+        "GIN",
+        "VODKA",
+        "LIQUEUR",
+        "BITTER",
+        "FRUIT_SPIRIT",
+        "TEQUILA",
+        "OTHER"
+      ],
+      "required": true
+    },
+    "cognacProperties": {
+      "type": "json"
+    },
+    "whiskyProperties": {
+      "type": "json"
+    },
+    "rumProperties": {
+      "type": "json"
+    },
+    "ginProperties": {
+      "type": "json"
+    },
+    "vodkaProperties": {
+      "type": "json"
+    },
+    "liqueurProperties": {
+      "type": "json"
+    },
+    "bitterProperties": {
+      "type": "json"
+    },
+    "fruitSpiritProperties": {
+      "type": "json"
+    },
+    "tequilaProperties": {
+      "type": "json"
+    },
+    "otherSpiritProperties": {
+      "type": "json"
+    }
+  }
+}

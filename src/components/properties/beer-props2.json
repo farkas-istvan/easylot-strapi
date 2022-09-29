@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_properties_beer_props2s",
+  "info": {
+    "displayName": "beerProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "degreeOfBalling": {
+      "type": "decimal",
+      "required": true,
+      "max": 1,
+      "min": 0.01
+    },
+    "breweryBusinessType": {
+      "type": "enumeration",
+      "enum": [
+        "SMALL_BUSINESS",
+        "BIG_BUSINESS"
+      ]
+    },
+    "containsAddedSugar": {
+      "type": "boolean"
+    },
+    "containsAddedSweetener": {
+      "type": "boolean"
+    },
+    "sugarContentType": {
+      "type": "enumeration",
+      "enum": [
+        "CONTAINS_SUGAR",
+        "CONTAINS_REDUCED_SUGAR",
+        "SUGAR_FREE",
+        "LIGHT"
+      ],
+      "required": false
+    },
+    "sugarContentInGramsPerHundredMilliliters": {
+      "type": "decimal"
+    },
+    "beerType": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::beer-type.beer-type"
+    }
+  }
+}
