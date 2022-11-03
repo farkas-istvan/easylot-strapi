@@ -12,11 +12,11 @@
       "max": 1,
       "min": 0.01
     },
-    "breweryBusinessType": {
+    "breweryType": {
       "type": "enumeration",
       "enum": [
-        "SMALL_BUSINESS",
-        "BIG_BUSINESS"
+        "SMALL_SCALE",
+        "LARGE_SCALE"
       ]
     },
     "containsAddedSugar": {
@@ -39,9 +39,84 @@
       "type": "decimal"
     },
     "beerType": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::beer-type.beer-type"
+      "type": "enumeration",
+      "enum": [
+        "SPONTANEOUSLY_FERMENTED",
+        "TOP_FERMENTED",
+        "BOTTOM_FERMENTED",
+        "HYBRID",
+        "ALCOHOL_FREE"
+      ]
+    },
+    "spontaneouslyFermentedType": {
+      "type": "enumeration",
+      "enum": [
+        "FARO",
+        "GUEUZE"
+      ]
+    },
+    "topFermentedType": {
+      "type": "enumeration",
+      "enum": [
+        "BITTER_ALE",
+        "BROWN_ALE",
+        "INDIA_PALE_ALE",
+        "PALE_ALE",
+        "BELGIAN_STRONG_ALE",
+        "STRONG_ALE_OLD_ENGLISH_ALE",
+        "MILD",
+        "STOUT",
+        "OATMEAL_STOUT",
+        "SWEET_STOUT",
+        "MILK_STOUT",
+        "IMPERIAL_STOUT",
+        "PORTER",
+        "BARLEY_WINE",
+        "SAISON_SEASONAL",
+        "SCOTCH_ALE_SCOTTISH_ALE_WEE_HEAVY",
+        "TRAPPIST_BEER"
+      ]
+    },
+    "bottomFermentedType": {
+      "type": "enumeration",
+      "enum": [
+        "PILS_PILSNER_PILSENER",
+        "BOCK_BOK",
+        "DRY_BEER",
+        "HELLES",
+        "SCHWARZBIER",
+        "KELLERBIER_OR_ZWICKELBIER",
+        "MARZEN_OKTOBERFEST"
+      ]
+    },
+    "hybridFermentedType": {
+      "type": "enumeration",
+      "enum": [
+        "WHEAT_BEER",
+        "WIT_WHITE",
+        "ALT_ALTBIER",
+        "KOELSCH",
+        "STEAM_BEER",
+        "SMOKED_BEER",
+        "SEASONAL_WINTER_CHRISTMAS_BEERS"
+      ]
+    },
+    "characterOfBeer": {
+      "type": "enumeration",
+      "enum": [
+        "CLEAR",
+        "HALF_BROWN",
+        "BROWN",
+        "BLACK",
+        "RED",
+        "UNFILTERED",
+        "WHEAT",
+        "COLD_HOPPED",
+        "DOUBLE_HOPPED",
+        "TRIPLE_CHERRY",
+        "FLAVORED",
+        "OTHER"
+      ]
     }
   }
 }

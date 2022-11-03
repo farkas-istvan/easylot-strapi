@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_properties_product_container_props",
+  "info": {
+    "displayName": "ProductContainerProps"
+  },
+  "options": {},
+  "attributes": {
+    "container": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::container.container"
+    },
+    "inseparablePartOfProduct": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

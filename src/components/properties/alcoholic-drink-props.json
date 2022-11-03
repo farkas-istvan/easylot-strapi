@@ -39,10 +39,9 @@
       "component": "properties.grape-wine-props"
     },
     "otherAlcoholProperties": {
-      "displayName": "OtherAlcProps",
       "type": "component",
       "repeatable": false,
-      "component": "properties.other-alc-props"
+      "component": "properties.other-props"
     }
   }
 }

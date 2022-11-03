@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_properties_collector_props",
+  "info": {
+    "displayName": "ProductCollectorProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "count": {
+      "type": "integer"
+    },
+    "collectorImage": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-image.product-image"
+    },
+    "packagingUnitOfCollector": {
+      "type": "enumeration",
+      "enum": [
+        "BOTTLE_PER_CARTON",
+        "BOTTLE_PER_SHRINK",
+        "BOTTLE_PER_TRAY",
+        "BOTTLE_PER_CRATE",
+        "BOTTLE_PER_PALLET",
+        "BOX_PER_CARTON",
+        "BOX_PER_SHRINK",
+        "BOX_PER_TRAY",
+        "BOX_PER_CRATE",
+        "BOX_PER_PALLET",
+        "PLASTIC_BOTTLE_PER_CARTON",
+        "PLASTIC_BOTTLE_PER_SHRINK",
+        "PLASTIC_BOTTLE_PER_TRAY",
+        "PLASTIC_BOTTLE_PER_CRATE",
+        "PLASTIC_BOTTLE_PER_PALLET",
+        "CARTON_PER_PALLET",
+        "CRATE_PER_PALLET",
+        "SHRINK_PER_PALLET",
+        "TRAY_PER_PALLET",
+        "KEG_PER_PALLET"
+      ]
+    },
+    "ean": {
+      "type": "string"
+    },
+    "standaloneProduct": {
+      "type": "boolean"
+    }
+  }
+}

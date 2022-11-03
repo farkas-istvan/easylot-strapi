@@ -221,18 +221,6 @@
       "maxLength": 36,
       "minLength": 36
     },
-    "globalContainerId": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "string",
-      "required": true,
-      "minLength": 8,
-      "maxLength": 30,
-      "regex": "^[0-9]{8,30}$"
-    },
     "vatRate": {
       "pluginOptions": {
         "i18n": {
@@ -245,6 +233,18 @@
         "EIGHTEEN"
       ],
       "required": true
+    },
+    "globalContainerId": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "regex": "^(0)([0-9])([0-9]{11})([0-9])([A-Za-z0-9]{0,16})$|^([0-9])([0-9]{6})([0-9])$|^(0)([0-9]{11})([0-9])$|^([1-9])([0-9]{11})([0-9])$|^([0-9])([0-9])([0-9]{11})([0-9])$",
+      "required": true,
+      "minLength": 8,
+      "maxLength": 8
     }
   }
 }

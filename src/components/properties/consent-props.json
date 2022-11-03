@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_properties_consent_props",
+  "info": {
+    "displayName": "ConsentProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "confirmedAt": {
+      "type": "datetime"
+    },
+    "consentId": {
+      "type": "biginteger"
+    },
+    "consentHash": {
+      "type": "string"
+    },
+    "confirmedBy": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

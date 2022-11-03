@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_properties_special_product_props",
+  "info": {
+    "displayName": "SpecialProductProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "marketingLabel": {
+      "type": "enumeration",
+      "enum": [
+        "NOVELTY",
+        "FAVOURITE",
+        "LIMITED",
+        "OFFER",
+        "ONLY_WITH_US",
+        "AWARD_WINNING"
+      ]
+    },
+    "experienceCategories": {
+      "type": "json"
+    },
+    "foodPairings": {
+      "type": "json"
+    },
+    "specialParameters": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_properties_product_package_props",
+  "info": {
+    "displayName": "ProductPackageProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "packageId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::package.package"
+    },
+    "inseparablePartOfProduct": {
+      "type": "boolean"
+    }
+  }
+}

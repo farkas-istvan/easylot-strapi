@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_properties_optional_product_props",
+  "info": {
+    "displayName": "OptionalProductProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "descriptionOfUsage": {
+      "type": "string"
+    },
+    "descriptionOfStorage": {
+      "type": "string"
+    },
+    "seoProperties": {
+      "type": "json"
+    },
+    "specialProperties": {
+      "displayName": "SpecialProductProps",
+      "type": "component",
+      "repeatable": false,
+      "component": "properties.special-product-props"
+    },
+    "collectorProperties": {
+      "type": "component",
+      "repeatable": true,
+      "component": "properties.collector-props"
+    },
+    "containerProperties": {
+      "type": "component",
+      "repeatable": true,
+      "component": "properties.product-container-props"
+    },
+    "packageProperties": {
+      "type": "component",
+      "repeatable": true,
+      "component": "properties.product-package-props"
+    }
+  }
+}

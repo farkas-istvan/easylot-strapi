@@ -34,9 +34,7 @@
       "type": "boolean"
     },
     "flavorTypes": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::flavor-type.flavor-type"
+      "type": "json"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_properties_other_props",
+  "info": {
+    "displayName": "OtherAlcoholProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "ingredientType": {
+      "type": "enumeration",
+      "enum": [
+        "APPLE",
+        "PEAR",
+        "OTHER"
+      ]
+    },
+    "vermouthType": {
+      "type": "enumeration",
+      "enum": [
+        "EXTRA_DRY",
+        "BIANCO"
+      ]
+    },
+    "otherAlcoholType": {
+      "type": "enumeration",
+      "enum": [
+        "CIDER",
+        "FRUIT_WINE",
+        "VERMOUTH"
+      ]
+    }
+  }
+}
