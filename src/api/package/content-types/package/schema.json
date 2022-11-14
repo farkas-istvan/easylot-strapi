@@ -189,6 +189,14 @@
         "EIGHTEEN"
       ],
       "required": true
+    },
+    "rejectionReason": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }

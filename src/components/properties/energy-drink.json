@@ -27,9 +27,6 @@
     "containsAddedSweetener": {
       "type": "boolean"
     },
-    "sugarContentInGramsPerHundredMilliliters": {
-      "type": "decimal"
-    },
     "containsTaurinOrGingsengOrLarginin": {
       "type": "boolean"
     },
@@ -86,6 +83,15 @@
         "ROSEHIP",
         "ELDERFLOWER"
       ]
+    },
+    "metilXantinAmount": {
+      "type": "decimal"
+    },
+    "proteinContentIsOver28PerCentByWeight": {
+      "type": "boolean"
+    },
+    "containsFruitsOrVegetablesAtLeast50Percent": {
+      "type": "boolean"
     }
   }
 }

@@ -86,6 +86,9 @@
         "ROSEHIP",
         "ELDERFLOWER"
       ]
+    },
+    "proteinContentIsOver28PerCentByWeight": {
+      "type": "boolean"
     }
   }
 }
