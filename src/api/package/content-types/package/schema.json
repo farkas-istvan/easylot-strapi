@@ -197,6 +197,12 @@
         }
       },
       "type": "string"
+    },
+    "independentProduct": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "independentPackage"
     }
   }
 }

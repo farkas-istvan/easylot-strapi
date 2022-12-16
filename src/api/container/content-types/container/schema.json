@@ -253,6 +253,12 @@
         }
       },
       "type": "string"
+    },
+    "independentProduct": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "independentContainer"
     }
   }
 }

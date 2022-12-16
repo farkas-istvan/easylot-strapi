@@ -6,13 +6,12 @@
   },
   "options": {},
   "attributes": {
-    "count": {
-      "type": "integer"
-    },
-    "collectorImage": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::product-image.product-image"
+    "collectorType": {
+      "type": "enumeration",
+      "enum": [
+        "CONTAINER",
+        "PACKAGE"
+      ]
     },
     "packagingUnitOfCollector": {
       "type": "enumeration",
@@ -39,11 +38,27 @@
         "KEG_PER_PALLET"
       ]
     },
-    "ean": {
-      "type": "string"
+    "packageId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::package.package"
     },
-    "standaloneProduct": {
+    "containerId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::container.container"
+    },
+    "count": {
+      "type": "integer"
+    },
+    "nexCollector": {
+      "type": "json"
+    },
+    "inseparablePartOfProduct": {
       "type": "boolean"
+    },
+    "inseparableProductProperties": {
+      "type": "json"
     }
   }
 }

@@ -6,17 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "marketingLabel": {
-      "type": "enumeration",
-      "enum": [
-        "NOVELTY",
-        "FAVOURITE",
-        "LIMITED",
-        "OFFER",
-        "ONLY_WITH_US",
-        "AWARD_WINNING"
-      ]
-    },
     "experienceCategories": {
       "type": "json"
     },
@@ -24,6 +13,12 @@
       "type": "json"
     },
     "specialParameters": {
+      "type": "json"
+    },
+    "specialParametersOther": {
+      "type": "string"
+    },
+    "marketingLabels": {
       "type": "json"
     }
   }

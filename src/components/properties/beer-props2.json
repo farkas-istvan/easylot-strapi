@@ -8,7 +8,7 @@
   "attributes": {
     "degreeOfBalling": {
       "type": "decimal",
-      "required": true,
+      "required": false,
       "max": 1,
       "min": 0.01
     },

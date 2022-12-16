@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_properties_inseparable_product_props",
+  "info": {
+    "displayName": "InseparableProductProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "ean": {
+      "type": "string"
+    },
+    "netAmount": {
+      "type": "decimal"
+    },
+    "grossWightInKilograms": {
+      "type": "decimal"
+    },
+    "customerSegment": {
+      "type": "component",
+      "repeatable": true,
+      "component": "properties.customer-segment"
+    },
+    "image": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-image.product-image"
+    },
+    "hoReCa": {
+      "type": "boolean"
+    },
+    "shortDescription": {
+      "type": "string"
+    },
+    "detailedDescription": {
+      "type": "string"
+    }
+  }
+}

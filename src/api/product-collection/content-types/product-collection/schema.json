@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_collections",
+  "info": {
+    "singularName": "product-collection",
+    "pluralName": "product-collections",
+    "displayName": "ProductCollector",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "packagingUnitOfCollector": {
+      "type": "enumeration",
+      "enum": [
+        "BOTTLE_PER_CARTON",
+        "BOTTLE_PER_SHRINK",
+        "BOTTLE_PER_TRAY",
+        "BOTTLE_PER_CRATE",
+        "BOTTLE_PER_PALLET",
+        "BOX_PER_CARTON",
+        "BOX_PER_SHRINK",
+        "BOX_PER_TRAY",
+        "BOX_PER_CRATE",
+        "BOX_PER_PALLET",
+        "PLASTIC_BOTTLE_PER_CARTON",
+        "PLASTIC_BOTTLE_PER_SHRINK",
+        "PLASTIC_BOTTLE_PER_TRAY",
+        "PLASTIC_BOTTLE_PER_CRATE",
+        "PLASTIC_BOTTLE_PER_PALLET",
+        "CARTON_PER_PALLET",
+        "CRATE_PER_PALLET",
+        "SHRINK_PER_PALLET",
+        "TRAY_PER_PALLET",
+        "KEG_PER_PALLET"
+      ]
+    },
+    "containerId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::container.container"
+    },
+    "packageId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::package.package"
+    },
+    "count": {
+      "type": "integer"
+    },
+    "outerCollector": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-collection.product-collection",
+      "inversedBy": "innerCollector"
+    },
+    "innerCollector": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-collection.product-collection",
+      "inversedBy": "outerCollector"
+    },
+    "inseparablePartOfProduct": {
+      "type": "boolean"
+    },
+    "inseparableProductProperties": {
+      "type": "component",
+      "repeatable": false,
+      "component": "properties.inseparable-product-props"
+    },
+    "collectorType": {
+      "type": "enumeration",
+      "enum": [
+        "CONTAINER",
+        "PACKAGE"
+      ]
+    }
+  }
+}

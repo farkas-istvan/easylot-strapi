@@ -275,7 +275,7 @@
         }
       },
       "type": "richtext",
-      "required": true,
+      "required": false,
       "minLength": 1
     },
     "merchantId": {
@@ -299,16 +299,6 @@
         }
       },
       "component": "properties.non-alcoholic-drink-properties"
-    },
-    "optionalProperties": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "properties.optional-product-props"
     },
     "secondaryProductSheet": {
       "pluginOptions": {
@@ -344,6 +334,85 @@
         }
       },
       "component": "properties.consent-props"
+    },
+    "optionalProperties": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "properties.optional-product-props"
+    },
+    "independentPackageType": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "BOTTLE",
+        "BOX",
+        "PLASTIC_BOTTLE",
+        "BARREL",
+        "KEG",
+        "JUG",
+        "BALLOON",
+        "CLOSURES",
+        "OTHER"
+      ]
+    },
+    "independentContainerType": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "BOTTLE",
+        "BOX",
+        "PLASTIC_BOTTLE",
+        "BARREL",
+        "KEG",
+        "JUG",
+        "BALLOON",
+        "OTHER"
+      ]
+    },
+    "independentContainer": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::container.container",
+      "mappedBy": "independentProduct"
+    },
+    "independentPackage": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::package.package",
+      "inversedBy": "independentProduct"
+    },
+    "seoProperties": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "properties.seo-props"
+    },
+    "robotsMetaTags": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "properties.tag"
     }
   }
 }
