@@ -15,12 +15,12 @@
     "netAmount": {
       "type": "decimal"
     },
-    "grossWightInKilograms": {
+    "grossWeightInKilograms": {
       "type": "decimal"
     },
     "customerSegment": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "properties.customer-segment"
     },
     "image": {
